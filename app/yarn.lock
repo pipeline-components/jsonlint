@@ -26,7 +26,7 @@ has-color@~0.1.0:
   resolved "https://registry.yarnpkg.com/has-color/-/has-color-0.1.7.tgz#67144a5260c34fc3cca677d041daf52fe7b78b2f"
   integrity sha1-ZxRKUmDDT8PMpnfQQdr1L+e3iy8=
 
-jsonlint@^1.6.3:
+jsonlint@1.6.3:
   version "1.6.3"
   resolved "https://registry.yarnpkg.com/jsonlint/-/jsonlint-1.6.3.tgz#cb5e31efc0b78291d0d862fbef05900adf212988"
   integrity sha512-jMVTMzP+7gU/IyC6hvKyWpUU8tmTkK5b3BPNuMI9U8Sit+YAWLlZwB6Y6YrdCxfg2kNz05p3XY3Bmm4m26Nv3A==
