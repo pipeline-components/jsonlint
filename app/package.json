@@ -1,5 +1,5 @@
 {
   "dependencies": {
-    "jsonlint": "^1.6.3"
+    "jsonlint": "1.6.3"
   }
 }
