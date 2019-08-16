@@ -1,4 +1,4 @@
-FROM node:10.16.2-alpine
+FROM node:10.16.3-alpine
 COPY app /app/
 WORKDIR /app/
 ENV PATH "$PATH:/app/node_modules/.bin/"
