@@ -1,4 +1,10 @@
+FROM pipelinecomponents/base-entrypoint:0.1.0 as entrypoint
+
 FROM node:10.16.3-alpine
+COPY --from=entrypoint /entrypoint.sh /entrypoint.sh
+ENTRYPOINT ["/entrypoint.sh"]
+ENV DEFAULTCMD jsonlint
+
 COPY app /app/
 WORKDIR /app/
 ENV PATH "$PATH:/app/node_modules/.bin/"
