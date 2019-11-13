@@ -5,10 +5,14 @@ COPY --from=entrypoint /entrypoint.sh /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
 ENV DEFAULTCMD jsonlint
 
-COPY app /app/
 WORKDIR /app/
+
+# Generic
+RUN apk add --no-cache parallel=20180622-r0 musl=1.1.20-r5
+COPY app /app/
+
+# Node
 ENV PATH "$PATH:/app/node_modules/.bin/"
-RUN apk --no-cache add parallel=20180622-r0
 RUN yarn install --frozen-lockfile && yarn cache clean
 
 WORKDIR /code/
