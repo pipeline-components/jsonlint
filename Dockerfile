@@ -8,7 +8,7 @@ ENV DEFAULTCMD jsonlint
 WORKDIR /app/
 
 # Generic
-RUN apk add --no-cache parallel=20190522-r0
+RUN apk add --no-cache parallel=20191122-r0
 COPY app /app/
 
 # Node
