@@ -1,6 +1,6 @@
 FROM pipelinecomponents/base-entrypoint:0.2.0 as entrypoint
 
-FROM node:12.14.0-alpine
+FROM node:12.14.1-alpine
 COPY --from=entrypoint /entrypoint.sh /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
 ENV DEFAULTCMD jsonlint
@@ -8,7 +8,7 @@ ENV DEFAULTCMD jsonlint
 WORKDIR /app/
 
 # Generic
-RUN apk add --no-cache parallel=20190522-r0
+RUN apk add --no-cache parallel=20191122-r0
 COPY app /app/
 
 # Node
