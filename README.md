@@ -22,7 +22,7 @@ The image is based on node:10.14-alpine
 ```yaml
 jsonlint:
   stage: linting
-  image: pipelinecomponents/jsonlint:latest
+  image: registry.gitlab.com/pipeline-components/jsonlint:latest
   script:
     - |
       find . -not -path './.git/*' -name '*.json' -type f -print0 |
