@@ -19,6 +19,7 @@ The image is based on node:10.14-alpine
 
 ## Examples
 
+### GitLab CI
 ```yaml
 jsonlint:
   stage: linting
@@ -27,6 +28,32 @@ jsonlint:
     - |
       find . -not -path './.git/*' -name '*.json' -type f -print0 |
       parallel --will-cite -k -0 -n1 jsonlint -q
+```
+
+### Jenkins Pipeline (Jenkinsfile)
+```
+pipeline {
+  agent none
+  stages {
+    // Perform JSON linting against files in ./folder_containing_json_files
+    // FAIL the build if linting does not pass
+    stage('Linting'){
+      agent {
+        docker {
+          image 'pipelinecomponents/jsonlint:latest'
+          registryUrl 'REDACTED'
+          args '-v "/$(pwd)/folder_containing_json_files":/code'
+        }
+      }
+      steps {
+        // Emits complete command to be run on each invocation of xargs via -t option
+        // Exits with code '123' upon linting failure
+        sh "find . -name \'*.json\' -type f | xargs -t -n 1 jsonlint -q"
+      }
+    }
+  ...
+  }
+}
 ```
 
 ## Versioning
