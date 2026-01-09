@@ -1,5 +1,5 @@
 {
   "dependencies": {
-    "@prantlf/jsonlint": "16.1.0"
+    "@prantlf/jsonlint": "17.0.0"
   }
 }
