@@ -259,9 +259,9 @@ schemes@^1.4.0:
     extend "^3.0.0"
 
 smtp-address-parser@^1.0.3:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/smtp-address-parser/-/smtp-address-parser-1.1.0.tgz#681a4cd27a2df5feb3c7425b235ac8f05ea34d49"
-  integrity sha512-Gz11jbNU0plrReU9Sj7fmshSBxxJ9ShdD2q4ktHIHo/rpTH6lFyQoYHYKINPJtPe8aHFnsbtW46Ls0tCCBsIZg==
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/smtp-address-parser/-/smtp-address-parser-1.1.1.tgz#71070328e9f2006ad4fcabc7aa36c1ea246bbf78"
+  integrity sha512-02QRuo0uL+I6+VHY5LxYiKJMjbyrTJWFM6JWkWOcdLkfInjLvGdPQTjC+mUOt/0PzeNnRSCYNIDZfn6QRIQYug==
   dependencies:
     nearley "^2.20.1"
 
